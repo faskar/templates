@@ -60,20 +60,21 @@
             display: inline-block;
         }
         
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
         .magic-button {
-            display: block;
+            display: inline-block;
             background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
             color: white;
             text-decoration: none;
             padding: 16px 32px;
             border-radius: 8px;
             font-weight: 600;
-            margin: 30px auto;
-            width: 80%;
             text-align: center;
             box-shadow: 0 4px 12px rgba(107, 70, 193, 0.2);
-            transition: all 0.3s ease;
-            max-width: 320px;
         }
         
         .magic-button:hover {
@@ -128,10 +129,6 @@
                 font-size: 28px;
                 letter-spacing: 6px;
             }
-            
-            .magic-button {
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -150,7 +147,9 @@
                 Use the verification code above or click the magic link below to sign in to your 3D Creations account.
             </p>
             
-            <a href="{{ .ConfirmationURL }}" class="magic-button">Sign In to 3D Creations</a>
+            <div class="button-container">
+                <a href="{{ .ConfirmationURL }}" class="magic-button">Sign In to 3D Creations</a>
+            </div>
             
             <p class="alternative-login">
                 If the button doesn't work, you can also copy and paste this link into your browser:<br>
